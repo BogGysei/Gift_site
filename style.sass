@@ -1,0 +1,81 @@
+=btn_set 
+	border-radius: 4px
+	width: 129px
+	height: 63px
+	box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.12)
+	background: #FF1493
+	font-weight: 400
+	font-size: 14px
+	line-height: 329%
+	text-transform: uppercase
+	text-align: center
+	color: #fff
+	position: absolute
+	top: 220px
+	left: 50%
+	transform: translateX(-50%) // Центруємо кнопку відносно батьківського елементу
+	outline: none
+	z-index: 3
+	transition: 0.7s
+* 
+	margin: 0 
+	padding: 0 
+
+body
+	margin: 0
+
+.main 
+	min-height: 100vh /* змінено з height на min-height для коректної роботи мінімальної висоти */
+	background: url(1703257965_gagaru-club-p-kot-s-serdechkami-v-glazakh-pinterest-1.jpg) center (center / cover) no-repeat
+	position: relative 
+	margin: 0
+	&_btn
+		&_first
+			+btn_set
+			transform: translateX(-100%) // Половина ширини відстані між кнопками
+			&:hover
+				background: rgb(14, 146, 82)
+			
+			
+		&_second
+			+btn_set
+			transform: translateX(0%) // Положення кнопки другої кнопки без змін
+			&:hover
+				background: red
+		&_text
+			text-decoration: none
+	&_img
+		position: absolute
+		top:250px
+		height: 50%
+		width: 50%
+		z-index: 1
+	&_image
+		width: 10%
+		position: absolute
+		top:250px
+		left: 70%
+		z-index: 1
+	&_imagination
+		width: 10%
+		position: absolute
+		top: 299px
+		left:30%
+		z-index: 1
+
+.container
+	max-width: 100% // або будь-яке інше значення ширини, яке ви бажаєте
+	margin: 0 auto // це центруватиме контейнер на сторінці
+	padding: 0 15px // додайте відступи, які вам потрібні
+	// інші стилі, які вам потрібні
+
+.main_text 	
+	position: absolute
+	top:150px
+	font-weight: 700
+	font-size: 38px
+	line-height: 126%
+	text-transform: uppercase
+	text-align: center
+	color: #fff
+	font-family: 'Dancing Script', sans-serif
